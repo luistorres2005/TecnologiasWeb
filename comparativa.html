@@ -8,15 +8,16 @@
     </head>
     <body>
         <header>
-            <h1>Evolución de HTML5</h1>
+            <img src="img/unnamed.png" alt="logo" width="150">
+            <span>Evolución de HTML.</span>
 
             <nav>
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="historia.html">Historia</a></li>
-                    <li><a href="html5.html">HTML5</a></li>
-                    <li><a href="comparativa.html">Comparativa</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="index.html">Inicio.</a></li>
+                    <li><a href="historia.html">Historia.</a></li>
+                    <li><a href="html5.html">HTML5.</a></li>
+                    <li><a href="comparativa.html">Comparativa.</a></li>
+                    <li><a href="contacto.html">Contacto.</a></li>
                 </ul>
             </nav>            
         </header>
@@ -26,7 +27,7 @@
         <main>
             <article>
                 <header>
-                    <h2>Análisis comparativo: HTML5 vs HTML4.1</h2>
+                    <h2>Análisis comparativo: HTML5 vs HTML 4.1</h2>
                 </header>
 
                 <div>
@@ -37,13 +38,14 @@
                     </p>
                 </div>
 
-                <article>
+                <section>
                     <h2>Tabla comparativa.</h2>
+
                     <table>
                         <thead>
                             <tr>
                                 <th>Etiqueta obsoleta.</th>
-                                <th>Uso auntiguo.</th>
+                                <th>Uso antiguo.</th>
                                 <th>Etiqueta moderna.</th>
                                 <th>Uso actual.</th>
                             </tr>
@@ -52,42 +54,59 @@
                         <tbody>
                             <tr>
                                 <td>&lt;font&gt;</td>
-                                <td>estilo de texto.</td>
-                                <td>CSS.</td>
-                                <td>font-size / color.</td>
+                                <td>Estilo de texto.</td>
+                                <td>&lt;span&gt;CSS.</td>
+                                <td>Aplicar estilos de fuente mediante clases CSS.</td>
                             </tr>
 
                             <tr>
                                 <td>&lt;center&gt;</td>
                                 <td>Centrar contenido.</td>
                                 <td>CSS</td>
-                                <td>Control total mediante estilos</td>                                
+                                <td>Control total mediante estilos.</td>                                
                             </tr>
                             
                             <tr>
                                 <td>&lt;b&gt;</td>
                                 <td>Negrita visual</td>
                                 <td>&lt;strong&gt;</td>
-                                <td>Importancia</td>
+                                <td>Importancia.</td>
                             </tr>
 
                             <tr>
-                                <td>&lt;i&gt;</td>
-                                <td>Cursiva visual</td>
-                                <td>&lt;em&gt;</td>
-                                <td>Énfasis</td>
+                                <td>&lt;strike&gt;</td>
+                                <td>Texto tachado.</td>
+                                <td>&lt;del&gt;</td>
+                                <td>Marcar texto eliminado. </td>
                             </tr>
 
                             <tr>
                                 <td>&lt;big&gt;</td>
-                                <td>Texto grande</td>
+                                <td>Texto grande.</td>
                                 <td>CSS</td>
-                                <td>font-size</td>
+                                <td>Font-size</td>
+                            </tr>
+
+                            <tr>
+                                <td>&lt;i&gt;</td>
+                                <td>Texto en cursiva.</td>
+                                <td>&lt;span&gt;+CSS.</td>
+                                <td>Ajustar tamaño con font-size en una clase CSS.</td>
+                                
                             </tr>
 
                         </tbody>
                     </table>
-                </article>
+                </section>
+
+                <div>
+                    <p>
+                        A medida que la web maduró, muchas etiquetas dejaron de ser recomendadas
+                        porque mezclaban contenido y presentación o porque dificultaban la accesibilidad. 
+                        Comparar etiquetas obsoletas con sus alternativas modernas ayuda a escribir 
+                        código más limpio, semántico y preparado para el futuro.
+                    </p>
+                </div>
 
             </article>
         </main>
