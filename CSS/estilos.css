@@ -1,8 +1,3 @@
-/* =========================
-   Estilos básicos (1 solo CSS)
-   Archivo: CSS/estilos.css
-   ========================= */
-
 /* Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
@@ -31,9 +26,7 @@ body{
 img{ max-width: 100%; height: auto; border-radius: 8px; }
 hr{ border: 0; height: 1px; background: var(--border); margin: 0; }
 
-/* =========================
-   HEADER + NAV (Flexbox)
-   ========================= */
+/*HEADER + NAV (Flexbox)*/
 body > header{
   background: #111827;
   color: #fff;
@@ -90,9 +83,7 @@ textarea:focus-visible{
   outline-offset: 2px;
 }
 
-/* =========================
-   CONTENIDO
-   ========================= */
+/*CONTENIDO*/
 main{
   max-width: 980px;
   margin: 0 auto;
@@ -146,9 +137,7 @@ code{
   border-radius: 999px;
 }
 
-/* =========================
-   TABLAS (comparativa.html)
-   ========================= */
+/*TABLAS (comparativa.html)*/
 table{
   width: 100%;
   border-collapse: collapse;
@@ -171,9 +160,7 @@ th, td{
 
 th{ background: #f1f5f9; }
 
-/* =========================
-   FORMULARIO (contacto.html)
-   ========================= */
+/*FORMULARIO (contacto.html)*/
 form{
   margin-top: 10px;
   display: grid;
@@ -210,9 +197,7 @@ input[type="submit"]:hover{
   filter: brightness(1.05);
 }
 
-/* =========================
-   FOOTER (diferenciado)
-   ========================= */
+/*FOOTER (diferenciado)*/
 footer{
   padding: 14px 16px;
   text-align: center;
@@ -221,9 +206,7 @@ footer{
   border-top: 1px solid var(--border);
 }
 
-/* =========================
-   RESPONSIVE básico
-   ========================= */
+/*RESPONSIVE básico*/
 @media (min-width: 780px){
   body > header{
     flex-wrap: nowrap;
