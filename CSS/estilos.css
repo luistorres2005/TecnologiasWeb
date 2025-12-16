@@ -1,0 +1,236 @@
+/* =========================
+   Estilos básicos (1 solo CSS)
+   Archivo: CSS/estilos.css
+   ========================= */
+
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* Variables simples */
+:root{
+  --bg: #f4f5f7;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --accent: #2563eb;
+
+  --radius: 10px;
+}
+
+/* Reset básico */
+*{ box-sizing: border-box; }
+body{
+  margin: 0;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img{ max-width: 100%; height: auto; border-radius: 8px; }
+hr{ border: 0; height: 1px; background: var(--border); margin: 0; }
+
+/* =========================
+   HEADER + NAV (Flexbox)
+   ========================= */
+body > header{
+  background: #111827;
+  color: #fff;
+  padding: 12px 16px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+body > header img{
+  width: 52px;
+  height: auto;
+}
+
+body > header span{
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+/* Nav */
+body > header nav{
+  width: 100%; /* en móvil baja debajo */
+}
+
+body > header nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+body > header nav a{
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: background-color .15s ease;
+}
+
+body > header nav a:hover{
+  background: rgba(255,255,255,.14);
+}
+
+/* Foco visible (accesibilidad) */
+body > header nav a:focus-visible,
+input:focus-visible,
+textarea:focus-visible{
+  outline: 2px solid rgba(37, 99, 235, 0.65);
+  outline-offset: 2px;
+}
+
+/* =========================
+   CONTENIDO
+   ========================= */
+main{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 18px 16px 28px;
+}
+
+article{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+main article > header{
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+h1{ margin: 0 0 8px; font-size: 1.5rem; line-height: 1.25; }
+h2{ margin: 0 0 8px; font-size: 1.1rem; }
+h3{ margin: 0 0 6px; font-size: 1rem; }
+
+p{ margin: 0 0 10px; color: var(--text); }
+main article > header p{ color: var(--muted); }
+
+main article > section{
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+  margin-top: 12px;
+}
+
+main article > section > section{
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px;
+  margin-top: 10px;
+  background: #fff;
+}
+
+ul{ margin: 8px 0 0 18px; padding: 0; }
+li{ margin-bottom: 6px; }
+
+/* Code básico */
+code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  background: #eef2ff;
+  border: 1px solid #dbeafe;
+  padding: 1px 6px;
+  border-radius: 999px;
+}
+
+/* =========================
+   TABLAS (comparativa.html)
+   ========================= */
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border: 1px solid var(--border);
+}
+
+caption{
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+th, td{
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  text-align: left;
+}
+
+th{ background: #f1f5f9; }
+
+/* =========================
+   FORMULARIO (contacto.html)
+   ========================= */
+form{
+  margin-top: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+/* Como tienes <br> dentro del form */
+form br{ display: none; }
+
+label{ font-weight: 600; }
+
+input, textarea{
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font: inherit;
+  background: #fff;
+}
+
+textarea{ resize: vertical; min-height: 120px; }
+
+input[type="submit"]{
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover{
+  filter: brightness(1.05);
+}
+
+/* =========================
+   FOOTER (diferenciado)
+   ========================= */
+footer{
+  padding: 14px 16px;
+  text-align: center;
+  color: var(--muted);
+  background: #fff;
+  border-top: 1px solid var(--border);
+}
+
+/* =========================
+   RESPONSIVE básico
+   ========================= */
+@media (min-width: 780px){
+  body > header{
+    flex-wrap: nowrap;
+  }
+
+  body > header nav{
+    width: auto;
+    margin-left: auto; /* manda el nav a la derecha */
+  }
+}
