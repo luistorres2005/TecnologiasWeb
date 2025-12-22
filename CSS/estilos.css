@@ -1,219 +1,210 @@
-/* Google Font */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+/* Fuente Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
-/* Variables simples */
-:root{
-  --bg: #f4f5f7;
-  --surface: #ffffff;
-  --text: #1f2937;
-  --muted: #6b7280;
-  --border: #e5e7eb;
-  --accent: #2563eb;
-
-  --radius: 10px;
+/* Configuración General */
+* {
+    box-sizing: border-box;
 }
 
-/* Reset básico */
-*{ box-sizing: border-box; }
-body{
-  margin: 0;
-  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
 }
 
-img{ max-width: 100%; height: auto; border-radius: 8px; }
-hr{ border: 0; height: 1px; background: var(--border); margin: 0; }
-
-/*HEADER + NAV (Flexbox)*/
-body > header{
-  background: #111827;
-  color: #fff;
-  padding: 12px 16px;
-
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
+/*HEADER CENTRADO*/
+body > header {
+    background-color: #2c3e50;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Apila todo */
+    align-items: center;    /* Centra todo */
+    text-align: center;
+    border-bottom: 4px solid #3498db;
 }
 
-body > header img{
-  width: 52px;
-  height: auto;
-}
-
-body > header span{
-  font-weight: 700;
-  letter-spacing: .2px;
-}
-
-/* Nav */
-body > header nav{
-  width: 100%; /* en móvil baja debajo */
-}
-
-body > header nav ul{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-body > header nav a{
-  color: #fff;
-  text-decoration: none;
-  padding: 8px 10px;
-  border-radius: 6px;
-  transition: background-color .15s ease;
-}
-
-body > header nav a:hover{
-  background: rgba(255,255,255,.14);
-}
-
-/* Foco visible (accesibilidad) */
-body > header nav a:focus-visible,
-input:focus-visible,
-textarea:focus-visible{
-  outline: 2px solid rgba(37, 99, 235, 0.65);
-  outline-offset: 2px;
-}
-
-/*CONTENIDO*/
-main{
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 18px 16px 28px;
-}
-
-article{
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 16px;
-}
-
-main article > header{
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 12px;
-  margin-bottom: 12px;
-}
-
-h1{ margin: 0 0 8px; font-size: 1.5rem; line-height: 1.25; }
-h2{ margin: 0 0 8px; font-size: 1.1rem; }
-h3{ margin: 0 0 6px; font-size: 1rem; }
-
-p{ margin: 0 0 10px; color: var(--text); }
-main article > header p{ color: var(--muted); }
-
-main article > section{
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 12px;
-  margin-top: 12px;
-}
-
-main article > section > section{
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 10px;
-  margin-top: 10px;
-  background: #fff;
-}
-
-ul{ margin: 8px 0 0 18px; padding: 0; }
-li{ margin-bottom: 6px; }
-
-/* Code básico */
-code{
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-  background: #eef2ff;
-  border: 1px solid #dbeafe;
-  padding: 1px 6px;
-  border-radius: 999px;
-}
-
-/*TABLAS (comparativa.html)*/
-table{
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-  border: 1px solid var(--border);
-}
-
-caption{
-  text-align: left;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-th, td{
-  padding: 10px;
-  border-bottom: 1px solid var(--border);
-  vertical-align: top;
-  text-align: left;
-}
-
-th{ background: #f1f5f9; }
-
-/*FORMULARIO (contacto.html)*/
-form{
-  margin-top: 10px;
-  display: grid;
-  gap: 10px;
-}
-
-/* Como tienes <br> dentro del form */
-form br{ display: none; }
-
-label{ font-weight: 600; }
-
-input, textarea{
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  font: inherit;
-  background: #fff;
-}
-
-textarea{ resize: vertical; min-height: 120px; }
-
-input[type="submit"]{
-  background: var(--accent);
-  color: #fff;
-  border: 0;
-  padding: 10px 14px;
-  border-radius: var(--radius);
-  font-weight: 700;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover{
-  filter: brightness(1.05);
-}
-
-/*FOOTER (diferenciado)*/
-footer{
-  padding: 14px 16px;
-  text-align: center;
-  color: var(--muted);
-  background: #fff;
-  border-top: 1px solid var(--border);
-}
-
-/*RESPONSIVE básico*/
-@media (min-width: 780px){
-  body > header{
-    flex-wrap: nowrap;
-  }
-
-  body > header nav{
+body > header img {
+    height: 60px;
     width: auto;
-    margin-left: auto; /* manda el nav a la derecha */
-  }
+    margin-bottom: 10px;
+}
+
+body > header span {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* MENÚ */
+nav {
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centrado */
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background-color: #34495e;
+    color: #3498db;
+}
+
+/* CONTENIDO*/
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+article {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    /* Importante para que no se corte el texto */
+    height: auto;
+    overflow: visible;
+}
+
+/* AQUÍ ESTÁ EL DISEÑO DE TARJETAS PARA PÁRRAFOS */
+article p {
+    background-color: #f9f9f9;      /* Fondo gris muy claro */
+    border-left: 5px solid #3498db; /* Borde azul a la izquierda */
+    padding: 20px;                  /* Espacio interno */
+    margin-bottom: 20px;            /* Espacio entre párrafos */
+    border-radius: 4px;             /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra suave */
+    text-align: justify;            /* Texto justificado se ve mejor en tarjetas */
+}
+
+/* Títulos */
+h1 {
+    color: #2c3e50;
+    font-size: 2em;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #2980b9;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Tablas y Código */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th { background-color: #3498db; color: white; }
+
+code {
+    background-color: #f1f2f6;
+    color: #c0392b;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+/* Formulario */
+form {
+    display: grid;
+    gap: 15px;
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    margin-top: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: white;
+    color: #7f8c8d;
+}
+
+/*  MODO CELULAR (RESPONSIVE)  */
+@media screen and (max-width: 768px) {
+    /* Header compacto */
+    body > header { padding: 15px 10px; }
+    body > header span { font-size: 1.2em; }
+
+    /* Menú vertical botones grandes */
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+        background-color: rgba(255,255,255,0.1);
+        padding: 12px;
+    }
+
+    /* Ajustes contenido */
+    main { padding: 0 10px; }
+    article { padding: 20px; }
+    
+    /* Ajuste tarjetas párrafos en celular */
+    article p {
+        padding: 15px;
+        text-align: left; /* En celular es mejor alinear a la izquierda */
+    }
+
+    /* Tablas con scroll */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }
