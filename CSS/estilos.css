@@ -94,7 +94,7 @@ article p {
     margin-bottom: 20px;            /* Espacio entre párrafos */
     border-radius: 4px;             /* Bordes redondeados */
     box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra suave */
-    text-align: justify;            /* Texto justificado se ve mejor en tarjetas */
+    text-align: justify;            /* Texto justificado en tarjetas */
 }
 
 /* Títulos */
